@@ -1,0 +1,16 @@
+Number of crude materials
+3
+Unit purchase cost of each crude material
+3 2 1
+Number of end products
+2
+Unit market price of each end product
+4 2
+Yields (one row per crude material)
+0.7 0.2
+0.4 0.4
+0.3 0.6
+Input capacity
+11
+Output capacity
+9
