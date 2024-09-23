@@ -45,7 +45,7 @@ pivot and all preceding pivots are flipped.
 
 # Problem 2 
 
-## a) Implementation found in [planning.md](./planning.py)
+## a) Implementation found in [planning.py](./planning.py)
 
 ## b)
 
@@ -63,5 +63,5 @@ Objective function (total profit) = 14
 
 The highest prices we should be willing to pay per unit 
 of capacity expansion for capacity in and capacity out,
-is 0, and 1.56 respectively.
+is 0 and 1.56 respectively.
 
