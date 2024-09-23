@@ -1,4 +1,4 @@
-from pulp import LpMaximize, LpProblem, LpVariable, lpSum, LpStatus
+from pulp import LpMaximize, LpProblem, LpStatus, LpVariable, lpSum
 
 model = LpProblem(name="production_planning", sense=LpMaximize)
 
@@ -30,10 +30,13 @@ print(f"status: {model.status}, {LpStatus[model.status]}")
 
 print(f"objective: {model.objective.value()}")
 
+
 for var in model.variables():
     print(f"{var.name}: {var.value()}")
 
 
 for name, c in model.constraints.items():
     print(f"{name}: {c.value()}")
-    print(f"{name}_dual: {c.pi}, \t slack: {c.slack}")
+    if name in ["capacity_in", "capacity_out"]:
+        print(f"Highest price for {name} expansion: {c.pi}")
+    # print(f"{name}_dual: {c.pi}, \t slack: {c.slack}")

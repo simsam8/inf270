@@ -39,7 +39,8 @@ finding the optimal solution, the algorithm grows exponentially.
 The value of $x_1$ only changes when the kth pivot is in col 1, i.e. 
 when the entering variable is $w_1$ or $w_2$.
 
-When performing a pivot on the kth pivot, the sign of the current 
+When performing a pivot on the kth pivot, the sign of the coefficient
+in the column corresponding to the current 
 pivot and all preceding pivots are flipped.
 
 # Problem 2 
@@ -60,4 +61,7 @@ Objective function (total profit) = 14
 
 ## c)
 
+The highest prices we should be willing to pay per unit 
+of capacity expansion for capacity in and capacity out,
+is 0, and 1.56 respectively.
 
