@@ -36,12 +36,13 @@ finding the optimal solution, the algorithm grows exponentially.
 
 ## d)
 
-The value of $x_1$ only changes when the kth pivot is in col 1, i.e. 
+The value of $x_1$ only changes in the kth pivot 
 when the entering variable is $w_1$ or $w_2$.
+The value of $x_1$ changes between $1/10$ and $1/9$ every other pivot.
 
-When performing a pivot on the kth pivot, the sign of the coefficient
+Additionally, when performing the kth pivot, the sign of the coefficient
 in the column corresponding to the current 
-pivot and all preceding pivots are flipped.
+pivot and all preceding columns are flipped.
 
 # Problem 2 
 
