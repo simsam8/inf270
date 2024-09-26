@@ -1,27 +1,5 @@
 from pulp import LpMaximize, LpProblem, LpStatus, LpVariable, lpSum
 
-# with open("small.dat", "r") as f:
-#
-#     content = f.readlines()
-#     n_crudes = int(content[1].strip())
-#     # print(f"Number of crudes: {n_crudes}")
-#     crude_costs = [int(cost) for cost in content[3].strip().split(" ")]
-#     # print(f"Crude costs {crude_costs}")
-#     n_products = int(content[5].strip())
-#     # print(f"Number of end products: {n_products}")
-#     product_price = [int(price) for price in content[7].strip().split(" ")]
-#     # print(f"Product market prices: {product_price}")
-#     crude_yields = []
-#     for index in range(9, 9 + n_crudes):
-#         crude_yields.append([float(val) for val in content[index].strip().split(" ")])
-#
-#     # print(f"Crude yields: {crude_yields}")
-#
-#     capacity_input = int(content[13].strip())
-#     # print(f"Capacity input: {capacity_input}")
-#     capacity_output = int(content[15].strip())
-#     # print(f"Capacity output: {capacity_output}")
-
 model = LpProblem(name="production_planning", sense=LpMaximize)
 
 # Crude materials
