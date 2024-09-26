@@ -46,7 +46,6 @@ model += (n0 + n1 <= 9, "capacity_out")
 model += (n0 == 0.7 * m0 + 0.4 * m1 + 0.3 * m2, "yield_crude1")
 model += (n1 == 0.2 * m0 + 0.4 * m1 + 0.6 * m2, "yield_crude2")
 
-model.writeLP("test.lp")
 # Solve
 model.solve()
 
