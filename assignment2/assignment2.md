@@ -99,8 +99,19 @@ Dual constraints:
 
 $$
 \begin{align}
-y_1 + 2y_2 \geq (1-\alpha)
+y_1 + 2y_2 &\geq (1-\alpha)\\
+\frac{3}{5} + \frac{2}{5} &\geq (1-\alpha)\\
+1 &\geq 1 - \alpha\\
+\alpha &\geq 0\\
+\end{align}
+$$
 
+$$
+\begin{align}
+(2-\alpha)y_1 + y2 &\geq 1\\
+\frac{6}{5} - \frac{3}{5}\alpha + \frac{1}{5} &\geq 1\\
+\frac{7}{5} - \frac{5}{5} &\geq \frac{3}{5}\alpha\\
+\frac{2}{3} &\geq \alpha\\
 \end{align}
 $$
 
@@ -112,4 +123,23 @@ d)
 e)
 
 The LP is bounded, as there exists constraints that have opposite inequalities.
+
+
+# 2
+
+a)
+
+$$
+\begin{align}
+\underset{u,v}{\max}\quad \sum^{n}_{j=1}{z_j} &- \sum^{m}_{i=1}{k_iu_i}\\
+\sum^{m}_{i=1}{u_i} &\leq c_{in}\\
+\sum^{n}_{j=1}{v_i} &\leq c_{out}\\
+v_j - \sum^{m}_{i=1}{a_{ij}u_i} &= 0 \quad j = 1,\dots , n\\
+z_j = \sum^{T}_{k=1}{p_{jk}b_jk} &\quad j = 1,\dots,n\\
+b_{jT} = v_j - \sum^{T-1}_{k=1}{b_{jk}}&\quad j = 1,\dots,n\\
+u_1,\dots,u_m &\geq 0\\
+v_1,\dots,v_n &\geq 0\\
+b_{1T},\dots,b_{nT}&\geq 0\\
+\end{align}
+$$
 
