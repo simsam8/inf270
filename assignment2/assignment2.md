@@ -143,3 +143,16 @@ b_{1T},\dots,b_{nT}&\geq 0\\
 \end{align}
 $$
 
+
+
+# 3 
+
+a) 
+
+$$
+\begin{align}
+\underset{y}{\min}\quad y_1 b + \sum^{n}_{j=2}{y_j} &\\
+\sum^{m}_{i=j} y_ja_j &\geq c_j\\
+y_1,\dots,y_n &\geq 0\\
+\end{align}
+$$
