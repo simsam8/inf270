@@ -137,7 +137,7 @@ $$
 v_j - \sum^{m}_{i=1}{a_{ij}u_i} &= 0 \quad j = 1,\dots , n\\
 v_{jk} \leq b_{jk} &\quad j = 1,\dots,n\quad k=1,\dots,T-1\\
 v_j = \sum^{T}_{k=1}{v_{jk}}&\quad j = 1,\dots,n\\
-z_j = \sum^{T}_{k=1}{p_{jk}v_jk} &\quad j = 1,\dots,n\\
+z_j = \sum^{T}_{k=1}{p_{jk}v_{jk}} &\quad j = 1,\dots,n\\
 u_1,\dots,u_m &\geq 0\\
 v_1,\dots,v_n &\geq 0\\
 v_{11},\dots,v_{jT}&\geq 0\\
@@ -153,7 +153,17 @@ a)
 $$
 \begin{align}
 \underset{y}{\min}\quad y_1 b + \sum^{n}_{j=2}{y_j} &\\
-\sum^{m}_{i=j} y_ja_j &\geq c_j\\
+y_1a_j + y_{j+1} &\geq c_j \quad j=1,\dots,n\\
 y_1,\dots,y_n &\geq 0\\
 \end{align}
 $$
+
+b)
+
+- terminates before sum of a reaches b.
+- min function assures xj never exceeds 1
+
+
+c) 
+
+
