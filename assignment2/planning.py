@@ -12,15 +12,15 @@ u2 = LpVariable("u2", lowBound=0)
 v0 = LpVariable("v0", lowBound=0)
 v1 = LpVariable("v1", lowBound=0)
 
-# bjT units
+# End product segment amounts
 
-b01 = LpVariable("b01", lowBound=0)
-b02 = LpVariable("b02", lowBound=0)
-b0T = LpVariable("b0T", lowBound=0)
+v01 = LpVariable("v01", lowBound=0)
+v02 = LpVariable("v02", lowBound=0)
+v0T = LpVariable("v0T", lowBound=0)
 
-b11 = LpVariable("b11", lowBound=0)
-b12 = LpVariable("b12", lowBound=0)
-b1T = LpVariable("b1T", lowBound=0)
+v11 = LpVariable("v11", lowBound=0)
+v12 = LpVariable("v12", lowBound=0)
+v1T = LpVariable("v1T", lowBound=0)
 
 
 # Revenue
@@ -40,16 +40,16 @@ model += (v0 == 0.7 * u0 + 0.4 * u1 + 0.3 * u2, "yield_crude1")
 model += (v1 == 0.2 * u0 + 0.4 * u1 + 0.6 * u2, "yield_crude2")
 
 
-model += (b01 <= 10, "units sold for product 1 segment 1")
-model += (b02 <= 10, "units sold for product 1 segment 2")
-model += (b0T == v0 - b01 - b02, "units sold for product 1 segment T")
+model += (v0 == v01 + v02 + v0T, "sum of segments equals n of product 1")
+model += (v01 <= 10, "units sold for product 1 segment 1")
+model += (v02 <= 10, "units sold for product 1 segment 2")
 
-model += (b11 <= 15, "units sold for product 2 segment 1")
-model += (b12 <= 15, "units sold for product 2 segment 2")
-model += (b1T == v1 - b11 - b12, "units sold for product 2 segment T")
+model += (v1 == v11 + v12 + v1T, "sum of segments equals n of product 2")
+model += (v11 <= 15, "units sold for product 2 segment 1")
+model += (v12 <= 15, "units sold for product 2 segment 2")
 
-model += (z0 == 4.0 * b01 + 3.5 * b02 + 3.0 * b0T, "product0 profit")
-model += (z1 == 2.0 * b11 + 1.5 * b12 + 1.0 * b1T, "product1 profit")
+model += (z0 == 4.0 * v01 + 3.5 * v02 + 3.0 * v0T, "product0 profit")
+model += (z1 == 2.0 * v11 + 1.5 * v12 + 1.0 * v1T, "product1 profit")
 
 # Solve
 model.solve()

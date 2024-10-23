@@ -135,11 +135,12 @@ $$
 \sum^{m}_{i=1}{u_i} &\leq c_{in}\\
 \sum^{n}_{j=1}{v_i} &\leq c_{out}\\
 v_j - \sum^{m}_{i=1}{a_{ij}u_i} &= 0 \quad j = 1,\dots , n\\
-z_j = \sum^{T}_{k=1}{p_{jk}b_jk} &\quad j = 1,\dots,n\\
-b_{jT} = v_j - \sum^{T-1}_{k=1}{b_{jk}}&\quad j = 1,\dots,n\\
+v_{jk} \leq b_{jk} &\quad j = 1,\dots,n\quad k=1,\dots,T-1\\
+v_j = \sum^{T}_{k=1}{v_{jk}}&\quad j = 1,\dots,n\\
+z_j = \sum^{T}_{k=1}{p_{jk}v_jk} &\quad j = 1,\dots,n\\
 u_1,\dots,u_m &\geq 0\\
 v_1,\dots,v_n &\geq 0\\
-b_{1T},\dots,b_{nT}&\geq 0\\
+v_{11},\dots,v_{jT}&\geq 0\\
 \end{align}
 $$
 
