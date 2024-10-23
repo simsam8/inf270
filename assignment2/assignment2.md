@@ -123,7 +123,14 @@ d)
 
 e)
 
-The LP is bounded, as there exists constraints that have opposite inequalities.
+The LP is a linear combination of the Primal and Dual found previous in the task,
+where $\alpha =0,\quad \beta = 1$.
+The objective functions are added together as another constraint, 
+and the objective function is the sum of all variables.
+
+The first 5 constraints are feasible, as they are feasible in the Primal and Dual,
+but the last constraint is not feasible, as it is the sum of the objective functions 
+of the Primal and Dual, which sums to 0.
 
 
 # 2
