@@ -75,6 +75,7 @@ $y_1=\frac{3}{5}, y_2=\frac{1}{5}, z_1=0, z_2=0, z_3=\frac{2}{5}$
 c)
 
 Finding range for $\alpha$ in objective function:
+
 $$
 \newcommand\mycolv[1]{\begin{bmatrix}#1\end{bmatrix}}\\
 \newcommand\m[1]{\begin{pmatrix}#1\end{pmatrix}} 
