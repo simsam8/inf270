@@ -3,44 +3,44 @@
 a)
 
 $$
-\begin{align}
+\begin{align*}
 \underset{x}{\max}\quad 2x_1 + (1- \alpha)x_2 + x_3 & \\
 3x_1 + x_2 + (2-\alpha)x_3 &\leq 6\\
 x_1 + 2x_2 + x_3 &\leq 4\beta\\
 x_1,x_2,x_3 \geq 0 &
-\end{align}
+\end{align*}
 $$
 
 $$
-\begin{align}
+\begin{align*}
 \zeta &= 0 + 2x_1 + (1-\alpha)x_2 + x_3\\
 w_1 &= 6 - 3x_1 - x_2 - (2-\alpha)x_3\\
 w_2 &= 4\beta - x_1 - 2x_2 - x_3\\
-\end{align}
+\end{align*}
 $$
 
 $$
-\begin{align}
+\begin{align*}
 \zeta &= 0 + 2x_1 + x_2 + x_3\\
 w_1 &= 6 - 3x_1 - x_2 - 2x_3\\
 w_2 &= 4 - x_1 - 2x_2 - x_3\\
-\end{align}
+\end{align*}
 $$
 
 $$
-\begin{align}
+\begin{align*}
 \zeta &= 4 - \frac{2}{3}w_1 + \frac{1}{3}x_2 - \frac{1}{3}x_3\\
 x_1 &= 2 - \frac{1}{3}w_1 - \frac{1}{3}x_2 -\frac{2}{3}x_3\\
 w_2 &= 2 + \frac{1}{3}w_1 - \frac{5}{3}2x_2 - \frac{1}{3}x_3\\
-\end{align}
+\end{align*}
 $$
 
 $$
-\begin{align}
+\begin{align*}
 \zeta &= \frac{22}{5} - \frac{3}{5}w_1 - \frac{1}{5}w_2 - \frac{2}{5}x_3\\
 x_1 &= \frac{8}{5} - \frac{2}{5}w_1 + \frac{1}{5}w_2 - \frac{3}{5}x_3\\
 x_2 &= \frac{6}{5} + \frac{1}{5}w_1 - \frac{3}{5}2w_2 - \frac{1}{5}x_3\\
-\end{align}
+\end{align*}
 $$
 
 
@@ -49,24 +49,24 @@ $x_1=\frac{8}{5}, x_2=\frac{6}{5}, x_3=0$
 b)
 
 $$
-\begin{align}
+\begin{align*}
 \underset{y}{\min}\quad 6y_1 + 4\beta y_2 & \\
 3y_1 + y_2 & \geq 2\\
 y_1 + 2 y_2 & \geq (1-\alpha)\\
 (2-\alpha)y_1 + y_2 & \geq 1\\
 y_1,y_2 \geq 0 &\\
-\end{align}
+\end{align*}
 $$
 
 We find the optimal values for the dual from the primal solution.
 
 $$
-\begin{align}
+\begin{align*}
 -\xi &= -\frac{22}{5} -\frac{8}{5}z_1 -\frac{6}{5}z_2\\
 y_1 &= \frac{3}{5} + \frac{2}{5}z_1 - \frac{1}{5}z_2\\
 y_2 &= \frac{1}{5} - \frac{1}{5}z_1 + \frac{3}{5}z_2\\
 z_3 &= \frac{2}{5} + \frac{3}{5}z_1 + \frac{1}{5}z_2\\
-\end{align}
+\end{align*}
 $$
 
 $y_1=\frac{3}{5}, y_2=\frac{1}{5}, z_1=0, z_2=0, z_3=\frac{2}{5}$
@@ -136,7 +136,7 @@ of the Primal and Dual, which sums to 0.
 a)
 
 $$
-\begin{align}
+\begin{align*}
 \underset{u,v}{\max}\quad \sum^{n}_{j=1}{z_j} &- \sum^{m}_{i=1}{k_iu_i}\\
 \sum^{m}_{i=1}{u_i} &\leq c_{in}\\
 \sum^{n}_{j=1}{v_i} &\leq c_{out}\\
@@ -147,7 +147,7 @@ z_j = \sum^{T}_{k=1}{p_{jk}v_{jk}} &\quad j = 1,\dots,n\\
 u_1,\dots,u_m &\geq 0\\
 v_1,\dots,v_n &\geq 0\\
 v_{11},\dots,v_{jT}&\geq 0\\
-\end{align}
+\end{align*}
 $$
 
 
@@ -178,18 +178,18 @@ objective: 87.5
 a) 
 
 $$
-\begin{align}
-\underset{y}{\min}\quad y b + \sum^{n}_{j=1}{z_j} &\\
-ya_j + z_{j+1} &\geq c_j \quad j=1,\dots,n\\
-z_1,\dots,z_n &\geq 0\\
-y &\geq 0\\
-\end{align}
+\begin{align*}
+\underset{y}{\min}\quad y_0 b + \sum^{n}_{j=1}{y_j} &\\
+y_0a_j + y_{j+1} &\geq c_j \quad j=1,\dots,n\\
+y_0,\dots,y_n &\geq 0\\
+\end{align*}
 $$
 
 b)
 
-- terminates before sum of a reaches b.
-- min function assures xj never exceeds 1
+The algorithm provides a Primal feasible solution,
+as it terminates before the sum of $a$ exceeds $b$.
+And the min function assures that $x^{*}_j$ never exceeds $1$.
 
 $x^{*} = (1,1,\frac{1}{4},0)$
 
