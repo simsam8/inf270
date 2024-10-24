@@ -99,22 +99,7 @@ x_2 \quad range \to \mycolv{\frac{2}{3}&4}\\
 \end{align*}\\
 $$
 
-Checking for values of $\alpha$ in the dual:
-
-$$
-y_1 + 2y_2 - z_2 \leq 1-\alpha\\
-\frac{3}{5} + 2\frac{1}{5} - 0 \leq 1-\alpha\\
-\alpha \leq 0
-\\~\\
-(2-\alpha)y_1 + y_2 - z_3 \leq 1\\
-(2-\alpha)\frac{3}{5} + \frac{1}{5} - \frac{2}{5} \leq 1\\
-\frac{6}{5} - \frac{3}{5}\alpha + \frac{1}{5} - \frac{2}{5} \leq 1\\
--\frac{3}{5}\alpha \leq 0\\
-\alpha \geq 0\\
-?????
-$$
-
-The tighest bound on $\alpha$ then becomes: $-3 \leq \alpha < \frac{1}{3}$
+The tighest bound on $\alpha$ then becomes: $-3 \leq \alpha \leq \frac{1}{3}$
 
 Thus these are the values for $\alpha$ where the solution in a) remains optimal.
 
@@ -203,6 +188,8 @@ b)
 
 - terminates before sum of a reaches b.
 - min function assures xj never exceeds 1
+
+$x^{*} = (1,1,\frac{1}{4},0)$
 
 
 c) 
