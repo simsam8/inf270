@@ -114,12 +114,24 @@ y_1 + 2y_2 - z_2 \leq 1-\alpha\\
 ?????
 $$
 
-The tighest bound on $\alpha$ then becomes: $-3 \leq \alpha \leq 0$
+The tighest bound on $\alpha$ then becomes: $-3 \leq \alpha < \frac{1}{3}$
 
 Thus these are the values for $\alpha$ where the solution in a) remains optimal.
 
 
 d)
+
+We solve $B^{-1}b \geq 0$:
+
+$$
+\newcommand\mycolv[1]{\begin{bmatrix}#1\end{bmatrix}}\\
+\frac{1}{5}\mycolv{2&-1\\-1&3}\mycolv{6\\4\beta} \geq 0\\
+\frac{1}{5}\mycolv{12-4\beta\\-6+12\beta}\geq 0\\
+\frac{12}{5} - \frac{4}{5}\beta \geq 0,\quad -\frac{6}{5} + \frac{12}{5}\beta \geq 0\\
+\frac{12}{5} \geq \frac{4}{5}\beta,\quad  \frac{12}{5}\beta \geq \frac{6}{5}\\
+3 \geq \beta, \quad \beta \geq \frac{1}{2}\\
+\frac{1}{2} \leq \beta \leq 3
+$$
 
 e)
 
