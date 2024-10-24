@@ -178,9 +178,10 @@ a)
 
 $$
 \begin{align}
-\underset{y}{\min}\quad y_1 b + \sum^{n}_{j=2}{y_j} &\\
-y_1a_j + y_{j+1} &\geq c_j \quad j=1,\dots,n\\
-y_1,\dots,y_n &\geq 0\\
+\underset{y}{\min}\quad y b + \sum^{n}_{j=1}{z_j} &\\
+ya_j + z_{j+1} &\geq c_j \quad j=1,\dots,n\\
+z_1,\dots,z_n &\geq 0\\
+y &\geq 0\\
 \end{align}
 $$
 
