@@ -216,9 +216,9 @@ the slack variables $w_j$ will either be zero if $x_j=1$ and/or if
 the capacity $b$ is filled, or the remaining 
 value to satisfy the constraint when $x_j$ is a fraction or 0.
 
-By knowing this, we can find $z^*,y^*,w^*$ by solving the inequalities:
+By knowing this, we can find $z,y,w^*$ by solving the inequalities:
 
-$A^Ty - z \geq c$ and $Ax + w \leq b$,
+$A^Ty - z = c$ and $Ax^* + w^* = b$,
 
 to find a feasible solution to the dual, which satisfies complementary slackness.
 
@@ -258,15 +258,15 @@ With the given $x^{*} = (1,1,\frac{1}{4},0)$,
 
 By using:
 
-$A^Ty - z \geq c$ and $Ax + w \leq b$,
+$A^Ty - z = c$ and $Ax^* + w^* = b$,
 
-we find $z^*,y^*,w^*$:
+we find $z,y,w^*$:
 
 $$
 \begin{aligned}
-x* = (1,1,\frac{1}{4},0)&\quad y^* = (2,2,3,0,0)\\
-z^* = (0,0,0,2)&\quad w^* = (0,0,0,\frac{3}{4},1)
+x* = (1,1,\frac{1}{4},0)&\quad y = (2,2,3,0,0)\\
+z = (0,0,0,2)&\quad w^* = (0,0,0,\frac{3}{4},1)
 \end{aligned}
 $$
 
-and we can see that $x_jz_j=0$ and $y_jw_j=0$ for all $j$. 
+and we can see that $x^*_jz_j=0$ and $y_jw^*_j=0$ for all $j$. 
