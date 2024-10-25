@@ -1,125 +1,133 @@
-# 1
+# Problem 1
 
-a)
+## a)
 
 $$
-\begin{align*}
+\begin{aligned}
 \underset{x}{\max}\quad 2x_1 + (1- \alpha)x_2 + x_3 & \\
 3x_1 + x_2 + (2-\alpha)x_3 &\leq 6\\
 x_1 + 2x_2 + x_3 &\leq 4\beta\\
 x_1,x_2,x_3 \geq 0 &
-\end{align*}
+\end{aligned}
 $$
 
 $$
-\begin{align*}
+\begin{aligned}
 \zeta &= 0 + 2x_1 + (1-\alpha)x_2 + x_3\\
 w_1 &= 6 - 3x_1 - x_2 - (2-\alpha)x_3\\
 w_2 &= 4\beta - x_1 - 2x_2 - x_3\\
-\end{align*}
+\end{aligned}
 $$
 
 $$
-\begin{align*}
+\begin{aligned}
 \zeta &= 0 + 2x_1 + x_2 + x_3\\
 w_1 &= 6 - 3x_1 - x_2 - 2x_3\\
 w_2 &= 4 - x_1 - 2x_2 - x_3\\
-\end{align*}
+\end{aligned}
 $$
 
 $$
-\begin{align*}
+\begin{aligned}
 \zeta &= 4 - \frac{2}{3}w_1 + \frac{1}{3}x_2 - \frac{1}{3}x_3\\
 x_1 &= 2 - \frac{1}{3}w_1 - \frac{1}{3}x_2 -\frac{2}{3}x_3\\
 w_2 &= 2 + \frac{1}{3}w_1 - \frac{5}{3}2x_2 - \frac{1}{3}x_3\\
-\end{align*}
+\end{aligned}
 $$
 
 $$
-\begin{align*}
+\begin{aligned}
 \zeta &= \frac{22}{5} - \frac{3}{5}w_1 - \frac{1}{5}w_2 - \frac{2}{5}x_3\\
 x_1 &= \frac{8}{5} - \frac{2}{5}w_1 + \frac{1}{5}w_2 - \frac{3}{5}x_3\\
 x_2 &= \frac{6}{5} + \frac{1}{5}w_1 - \frac{3}{5}2w_2 - \frac{1}{5}x_3\\
-\end{align*}
+\end{aligned}
 $$
 
 
 $x_1=\frac{8}{5}, x_2=\frac{6}{5}, x_3=0$
 
-b)
+\newpage
+
+## b)
 
 $$
-\begin{align*}
+\begin{aligned}
 \underset{y}{\min}\quad 6y_1 + 4\beta y_2 & \\
 3y_1 + y_2 & \geq 2\\
 y_1 + 2 y_2 & \geq (1-\alpha)\\
 (2-\alpha)y_1 + y_2 & \geq 1\\
 y_1,y_2 \geq 0 &\\
-\end{align*}
+\end{aligned}
 $$
 
 We find the optimal values for the dual from the primal solution.
 
 $$
-\begin{align*}
+\begin{aligned}
 -\xi &= -\frac{22}{5} -\frac{8}{5}z_1 -\frac{6}{5}z_2\\
 y_1 &= \frac{3}{5} + \frac{2}{5}z_1 - \frac{1}{5}z_2\\
 y_2 &= \frac{1}{5} - \frac{1}{5}z_1 + \frac{3}{5}z_2\\
 z_3 &= \frac{2}{5} + \frac{3}{5}z_1 + \frac{1}{5}z_2\\
-\end{align*}
+\end{aligned}
 $$
 
 $y_1=\frac{3}{5}, y_2=\frac{1}{5}, z_1=0, z_2=0, z_3=\frac{2}{5}$
 
+\newpage
 
-c)
+## c)
 
 Finding range for $\alpha$ in objective function:
 
 $$
 \newcommand\mycolv[1]{\begin{bmatrix}#1\end{bmatrix}}\\
 \newcommand\m[1]{\begin{pmatrix}#1\end{pmatrix}} 
-\mathcal{B} = \{1,2\},\quad \mathcal{N} = \{4,5,3\}\\
-\mathcal{c_{\mathcal{B}}} = \mycolv{2\\1},\quad \mathcal{c_{\mathcal{N}}} = \mycolv{0\\0\\1}\\
-\Delta \mathcal{c_{\mathcal{B}}} = \mycolv{0\\1}, \Delta \mathcal{c_{\mathcal{N}}} = \mycolv{0\\0\\0}\\
-B^{-1}N = \frac{1}{5}\mycolv{2&-1&3\\-1&3&1}\\
-\begin{align*}\\
-\Delta \mathcal{z}_{\mathcal{N}} &= (B^{-1}N)^{T}\Delta \mathcal{c_{\mathcal{B}}} - \Delta \mathcal{c_{\mathcal{N}}}\\
-\Delta \mathcal{z}_{\mathcal{N}} &= \frac{1}{5}\mycolv{2&-1\\-1&3\\3&1}\mycolv{0\\1}-\mycolv{0\\0\\0}\\
-\Delta \mathcal{z}_{\mathcal{N}} &= \frac{1}{5}\mycolv{-1\\3\\1}\\
-\end{align*}\\
-\mathcal{z}_{\mathcal{N}}^* = \frac{1}{5}\mycolv{3&1&2}^T\\
-\mathcal{z}_{\mathcal{N}}^* + t \Delta \mathcal{z}_{\mathcal{N}} \geq 0\\
-\frac{1}{5}\mycolv{3\\1\\2}+t\frac{1}{5}\mycolv{-1\\3\\1} \geq 0\\
-3\geq t,\quad t\geq -\frac{1}{3}, \quad t\geq -2\\
--\frac{1}{3} \leq t \leq 3\\
-x_2 \quad range \to \mycolv{\frac{2}{3}&4}\\
-\begin{align*}\\
+\begin{aligned}\\
+\mathcal{B} = \{1,2\},&\quad \mathcal{N} = \{4,5,3\}\\
+c_{\mathcal{B}} = \mycolv{2\\1},&\quad c_{\mathcal{N}} = \mycolv{0\\0\\1}\\
+\Delta c_{\mathcal{B}} = \mycolv{0\\1},&\quad \Delta c_{\mathcal{N}} = \mycolv{0\\0\\0}\\
+B^{-1}N &= \frac{1}{5}\mycolv{2&-1&3\\-1&3&1}\\
+\Delta z_{\mathcal{N}} &= (B^{-1}N)^{T}\Delta c_{\mathcal{B}} - \Delta c_{\mathcal{N}}\\
+\Delta z_{\mathcal{N}} &= \frac{1}{5}\mycolv{2&-1\\-1&3\\3&1}\mycolv{0\\1}-\mycolv{0\\0\\0}\\
+\Delta z_{\mathcal{N}} &= \frac{1}{5}\mycolv{-1\\3\\1}\\
+z_{\mathcal{N}}^* &= \frac{1}{5}\mycolv{3&1&2}^T\\
+z_{\mathcal{N}}^* + &t \Delta z_{\mathcal{N}} \geq 0\\
+\frac{1}{5}\mycolv{3\\1\\2}+t&\frac{1}{5}\mycolv{-1\\3\\1} \geq 0\\
+3\geq t,\quad t\geq &-\frac{1}{3}, \quad t\geq -2\\
+-\frac{1}{3} \leq &t \leq 3\\
+x_2 \quad range &\to \mycolv{\frac{2}{3}&4}\\
 1-\alpha = \frac{2}{3}, &\quad 1-\alpha = 4\\
 \alpha = \frac{1}{3}, &\quad \alpha = -3
-\end{align*}\\
+\end{aligned}\\
 $$
 
 The tighest bound on $\alpha$ then becomes: $-3 \leq \alpha \leq \frac{1}{3}$
 
 Thus these are the values for $\alpha$ where the solution in a) remains optimal.
 
+\newpage
 
-d)
+## d)
 
 We solve $B^{-1}b \geq 0$:
 
 $$
 \newcommand\mycolv[1]{\begin{bmatrix}#1\end{bmatrix}}\\
-\frac{1}{5}\mycolv{2&-1\\-1&3}\mycolv{6\\4\beta} \geq 0\\
-\frac{1}{5}\mycolv{12-4\beta\\-6+12\beta}\geq 0\\
-\frac{12}{5} - \frac{4}{5}\beta \geq 0,\quad -\frac{6}{5} + \frac{12}{5}\beta \geq 0\\
-\frac{12}{5} \geq \frac{4}{5}\beta,\quad  \frac{12}{5}\beta \geq \frac{6}{5}\\
-3 \geq \beta, \quad \beta \geq \frac{1}{2}\\
-\frac{1}{2} \leq \beta \leq 3
+\begin{aligned}
+\frac{1}{5}\mycolv{2&-1\\-1&3}\mycolv{6\\4\beta} &\geq 0\\
+\frac{1}{5}\mycolv{12-4\beta\\-6+12\beta}&\geq 0\\
+\frac{12}{5} - \frac{4}{5}\beta \geq 0,&\quad -\frac{6}{5} + \frac{12}{5}\beta \geq 0\\
+\frac{12}{5} \geq \frac{4}{5}\beta,&\quad  \frac{12}{5}\beta \geq \frac{6}{5}\\
+3 \geq \beta, &\quad \beta \geq \frac{1}{2}\\
+\frac{1}{2} \leq &\beta \leq 3
+\end{aligned}
 $$
 
-e)
+These are the values of $\beta$ where $x_1$ and $x_2$ remains in the basis of
+the optimal solution.
+
+
+## e)
 
 The LP is a linear combination of the Primal and Dual found previous in the task,
 where $\alpha =0,\quad \beta = 1$.
@@ -130,13 +138,14 @@ The first 5 constraints are feasible, as they are feasible in the Primal and Dua
 but the last constraint is not feasible, as it is the sum of the objective functions 
 of the Primal and Dual, which sums to 0.
 
+\newpage
 
-# 2
+# Problem 2
 
-a)
+## a)
 
 $$
-\begin{align*}
+\begin{aligned}
 \underset{u,v}{\max}\quad \sum^{n}_{j=1}{z_j} &- \sum^{m}_{i=1}{k_iu_i}\\
 \sum^{m}_{i=1}{u_i} &\leq c_{in}\\
 \sum^{n}_{j=1}{v_i} &\leq c_{out}\\
@@ -147,11 +156,12 @@ z_j = \sum^{T}_{k=1}{p_{jk}v_{jk}} &\quad j = 1,\dots,n\\
 u_1,\dots,u_m &\geq 0\\
 v_1,\dots,v_n &\geq 0\\
 v_{11},\dots,v_{jT}&\geq 0\\
-\end{align*}
+\end{aligned}
 $$
 
+\newpage
 
-c)
+## c)
 
 status: 1, Optimal
 
@@ -173,19 +183,21 @@ objective: 87.5
 |z0   | 105.0  |
 |z1   | 82.5   |
 
-# 3 
+\newpage
 
-a) 
+# Problem 3 
+
+## a) 
 
 $$
-\begin{align*}
+\begin{aligned}
 \underset{y}{\min}\quad y_0 b + \sum^{n}_{j=1}{y_j} &\\
 y_0a_j + y_{j+1} &\geq c_j \quad j=1,\dots,n\\
 y_0,\dots,y_n &\geq 0\\
-\end{align*}
+\end{aligned}
 $$
 
-b)
+## b)
 
 The algorithm provides a Primal feasible solution,
 as it terminates before the sum of $a$ exceeds $b$.
@@ -196,7 +208,7 @@ With the numerical example we get that:
 $x^{*} = (1,1,\frac{1}{4},0)$
 
 
-c) 
+## c) 
 
 
 Given the fact that the algorithm in b) provides a primal feasible solution,
@@ -219,26 +231,26 @@ Using the numerical example from b)
 We start by writing down the Primal and Dual.
 
 $$
-\begin{align*}
+\begin{aligned}
 \underset{x}{\max}\quad 4x_1 + 9x_2 + 8x_3 + 2x_4&\\
 x_1 + 3x_2 + 4x_3 + 2x_4 &\leq 5\\
 x_2 &\leq 1\\
 x_3 &\leq 1\\
 x_4 &\leq 1\\
 x_1,\dots,x_n &\geq 0\\
-\end{align*}
+\end{aligned}
 $$
 
 
 $$
-\begin{align*}
+\begin{aligned}
 \underset{y}{\min}\quad 5y_0 + y_1 + y_2 + y_3 + y_4&\\
 y_0 + y_1 &\leq 4\\
 3y_0 + y_2 &\leq 9\\
 4y_0 + y_3 &\leq 8\\
 2y_0 + y_4 &\leq 2\\
 y_0,\dots,y_n &\geq 0\\
-\end{align*}
+\end{aligned}
 $$
 
 With the given $x^{*} = (1,1,\frac{1}{4},0)$,
@@ -251,8 +263,10 @@ $A^Ty - z \geq c$ and $Ax + w \leq b$,
 we find $z^*,y^*,w^*$:
 
 $$
-x* = (1,1,\frac{1}{4},0)\quad y^* = (2,2,3,0,0)\\
-z^* = (0,0,0,2)\quad w^* = (0,0,0,\frac{3}{4},1)
+\begin{aligned}
+x* = (1,1,\frac{1}{4},0)&\quad y^* = (2,2,3,0,0)\\
+z^* = (0,0,0,2)&\quad w^* = (0,0,0,\frac{3}{4},1)
+\end{aligned}
 $$
 
 and we can see that $x_jz_j=0$ and $y_jw_j=0$ for all $j$. 
