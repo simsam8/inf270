@@ -191,9 +191,68 @@ The algorithm provides a Primal feasible solution,
 as it terminates before the sum of $a$ exceeds $b$.
 And the min function assures that $x^{*}_j$ never exceeds $1$.
 
+With the numerical example we get that:
+
 $x^{*} = (1,1,\frac{1}{4},0)$
 
 
 c) 
 
 
+Given the fact that the algorithm in b) provides a primal feasible solution,
+the slack variables $w_j$ will either be zero if $x_j=1$ and/or if 
+the capacity $b$ is filled, or the remaining 
+value to satisfy the constraint when $x_j$ is a fraction or 0.
+
+By knowing this, we can find $z^*,y^*,w^*$ by solving the inequalities:
+
+$A^Ty - z \geq c$ and $Ax + w \leq b$,
+
+to find a feasible solution to the dual, which satisfies complementary slackness.
+
+Once we find a feasible dual solution that satisfies complementary slackness,
+we know that $x^*$ is an optimal solution.
+
+
+Using the numerical example from b)
+
+We start by writing down the Primal and Dual.
+
+$$
+\begin{align*}
+\underset{x}{\max}\quad 4x_1 + 9x_2 + 8x_3 + 2x_4&\\
+x_1 + 3x_2 + 4x_3 + 2x_4 &\leq 5\\
+x_2 &\leq 1\\
+x_3 &\leq 1\\
+x_4 &\leq 1\\
+x_1,\dots,x_n &\geq 0\\
+\end{align*}
+$$
+
+
+$$
+\begin{align*}
+\underset{y}{\min}\quad 5y_0 + y_1 + y_2 + y_3 + y_4&\\
+y_0 + y_1 &\leq 4\\
+3y_0 + y_2 &\leq 9\\
+4y_0 + y_3 &\leq 8\\
+2y_0 + y_4 &\leq 2\\
+y_0,\dots,y_n &\geq 0\\
+\end{align*}
+$$
+
+With the given $x^{*} = (1,1,\frac{1}{4},0)$,
+
+
+By using:
+
+$A^Ty - z \geq c$ and $Ax + w \leq b$,
+
+we find $z^*,y^*,w^*$:
+
+$$
+x* = (1,1,\frac{1}{4},0)\quad y^* = (2,2,3,0,0)\\
+z^* = (0,0,0,2)\quad w^* = (0,0,0,\frac{3}{4},1)
+$$
+
+and we can see that $x_jz_j=0$ and $y_jw_j=0$ for all $j$. 
